@@ -1,3 +1,3 @@
 # freecodecamp-certifications
 
-- Learn HTML [x]
+- Learn HTML ✅

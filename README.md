@@ -1,3 +1,0 @@
-# freecodecamp-certifications
-
-- Learn HTML ✅

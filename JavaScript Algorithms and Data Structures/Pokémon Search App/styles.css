@@ -1,0 +1,248 @@
+:root {
+    --pikachu-yellow: #ffd500;
+    --pikachu-red: #ff1f1f;
+    --pikachu-brown: #964B00;
+    --pikachu-black: #2d2d2d;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--pikachu-yellow) 0%, #fff4b8 100%);
+    color: var(--pikachu-black);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--pikachu-red);
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0 var(--pikachu-brown),
+                 6px 6px 0 rgba(0,0,0,0.15);
+    letter-spacing: 2px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#search-input {
+    padding: 15px;
+    width: 300px;
+    border: 3px solid var(--pikachu-red);
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+#search-input:focus {
+    outline: none;
+    transform: scale(1.02);
+}
+
+#search-button {
+    padding: 15px 30px;
+    background-color: var(--pikachu-red);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #e01818;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.pokemon-info {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    backdrop-filter: blur(5px);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.pokemon-info:hover {
+    transform: translateY(-5px);
+}
+
+.basic-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#pokemon-name {
+    font-size: 2.5em;
+    color: var(--pikachu-red);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#pokemon-id {
+    color: var(--pikachu-brown);
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.sprite-container {
+    margin: 20px 0;
+    position: relative;
+}
+
+#sprite {
+    width: 200px;
+    height: 200px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+#sprite:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.types {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.type {
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.type:hover {
+    transform: scale(1.1);
+}
+
+.stats-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.physical-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: rgba(255, 213, 0, 0.1);
+    border-radius: 10px;
+}
+
+.physical-stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.battle-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: rgba(255, 31, 31, 0.05);
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.stat:hover {
+    background: rgba(255, 31, 31, 0.1);
+}
+
+.stat-label {
+    font-weight: bold;
+    color: var(--pikachu-brown);
+}
+
+.stat-value {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--pikachu-red);
+    min-width: 40px;
+    text-align: right;
+}
+
+.stat span:first-child {
+    width: 120px;
+    text-align: right;
+    font-weight: bold;
+    color: var(--pikachu-brown);
+}
+
+.stat-bar {
+    flex-grow: 1;
+    height: 12px;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Pokemon Type Colors with enhanced visibility */
+.NORMAL { background-color: #A8A878; }
+.FIRE { background-color: #F08030; }
+.WATER { background-color: #6890F0; }
+.ELECTRIC { background-color: #F8D030; }
+.GRASS { background-color: #78C850; }
+.ICE { background-color: #98D8D8; }
+.FIGHTING { background-color: #C03028; }
+.POISON { background-color: #A040A0; }
+.GROUND { background-color: #E0C068; }
+.FLYING { background-color: #A890F0; }
+.PSYCHIC { background-color: #F85888; }
+.BUG { background-color: #A8B820; }
+.ROCK { background-color: #B8A038; }
+.GHOST { background-color: #705898; }
+.DRAGON { background-color: #7038F8; }
+.DARK { background-color: #705848; }
+.STEEL { background-color: #B8B8D0; }
+.FAIRY { background-color: #EE99AC; }

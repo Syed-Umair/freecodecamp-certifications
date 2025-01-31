@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Search App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokémon Search</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" required placeholder="Enter Pokémon name or ID">
+                <button id="search-button">Search</button>
+            </div>
+        </header>
+        
+        <main class="pokemon-info hidden">
+            <div class="basic-info">
+                <h2 id="pokemon-name"></h2>
+                <p id="pokemon-id"></p>
+                <div class="sprite-container">
+                    <img id="sprite" alt="Pokemon sprite">
+                </div>
+                <div id="types" class="types"></div>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-group">
+                    <div class="physical-stats">
+                        <div class="physical-stat">
+                            <span class="stat-label">Weight:</span>
+                            <span id="weight"></span>
+                        </div>
+                        <div class="physical-stat">
+                            <span class="stat-label">Height:</span>
+                            <span id="height"></span>
+                        </div>
+                    </div>
+                    <div class="battle-stats">
+                        <div class="stat">
+                            <span class="stat-label">HP:</span>
+                            <span id="hp" class="stat-value"></span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Attack:</span>
+                            <span id="attack" class="stat-value"></span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Defense:</span>
+                            <span id="defense" class="stat-value"></span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Special Attack:</span>
+                            <span id="special-attack" class="stat-value"></span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Special Defense:</span>
+                            <span id="special-defense" class="stat-value"></span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Speed:</span>
+                            <span id="speed" class="stat-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
